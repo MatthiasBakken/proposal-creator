@@ -1,3 +1,53 @@
+# dOrg Proposal Creator and Builder Availability Calendar
+
+## Personal Intro
+
+Hi my name is Matthias Bakken (SleepyViking).
+
+Things I've done (that aren't in private repos):
+
+- [GitHub](https://github.com/MatthiasBakken)
+- [LinkedIn](https://www.linkedin.com/in/MatthiasBakken/)
+- [Rick&Morty](csb-6d95q.netlify.app)
+
+## Description
+
+With this project I want to create something that can easily be turned into a functional finished web application that is able to be used by the dOrg to update current availability to reduce friction when finding the right individuals for the job. Also, there will be a proposal creator function that allows you to populate the proposal with as many builders as the job may need and when proposal is created it sends out communication about the proposal to each builder that was selected for the job.
+
+## Time
+
+12 hours
+
+## Components
+
+[BuilderAvailability](./src/contracts/DAO/DAO.sol) - A simple contract that allows VotingCredits holders to vote on propoosals using a voting machine. These proposals are for a collection of executable calldatas.
+[CreateProposal](./src/contracts/DAO/VotingCredits/VotingCredits.sol) - A non-transferable MiniMe token.
+[Builders](./src/contracts/DAO/VotingMachines) - A fork of [DAOstack's infra voting machines](https://github.com/daostack/infra)
+[Frontend](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Backend](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Builder](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Menu](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Settings](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Availability](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[Description](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+[AddBuilders](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder)
+
+## Closing Notes
+
+This project is left in a very incomplete and experimental state. Here are some things I'd like to do in the future:
+
+- Recreate MiniMe using OpenZeppelin primitives.
+- Finish and use the newly refactored [IVotingMachine](./src/contracts/DAO/VotingMachines/interfaces/IVotingMachine.sol) interface for the voting machines.
+  - Improve the interface to handle nonces & signature digests in a uniform way.
+  - Find a generic way to handle both msg.sender & signature based executions in a single function signature. This would reduce code bloat.
+- Move the "Generic Multi Call" proposal functionality out of the DAO smart contract, and utilize a modules pattern for all desired additive functionality.
+  - Maybe use the diamond contract pattern?
+- Create a test scenario of a DAO that manages a registry.
+- Implement a standard upgrade & versioning pattern for all components.
+  - Version upgrades should respect interfaces, and be able to deprecate old + introduce new.
+- Interface specific initializers.
+  - This way a user can understand what interfaces are being used, what initializers those require, and if they have all been called meaning the contract / system is fully initialized.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
