@@ -1,12 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import './builder.css';
+import { IBuilderData } from '../dummy-data/builders-data';
 
-const Builder = () => {
-  return (
-    <div>
-      Builder
-    </div>
-  )
+interface IProps {
+    data: IBuilderData;
+}
+
+const BUILDER = "builder__"
+
+const Builder: React.FC<IProps> = (props) => {
+
+    const { data } = props;
+
+    return (
+        <div className={`${BUILDER}main`}>
+            <div className={`${BUILDER}container`}>
+                <section className={`${BUILDER}header`}>
+                    <h1 className={`${BUILDER}name`}>{`${data.firstName} ${data.lastName}`}</h1>
+                    <p className={`${BUILDER}designation`}>{`Designation: ${data.designation}`}</p>
+                </section>
+                <div className={`${BUILDER}details`}>
+                    <div className={`${BUILDER}skills-container`}>
+                        <h2 className={`${BUILDER}skill-tag`}>Skills: </h2>
+                        <section className={`${BUILDER}skills`}>
+                            {data.skills.map(skill => {
+                                return (
+                                    <p className={`${BUILDER}skill`} key={skill}>{skill}</p>
+                                )
+                            })}
+                        </section>
+                    </div>
+                    <div className={`${BUILDER}availability-container`}>
+                        <p>{`Available: ${data.availability.currentlyAvail === true ? 'Yes' : 'No'}`}</p>
+                        <p>{`Date Available: ${data.availability.availableOn.length ? data.availability.availableOn : 'No date available'}`}</p>
+                        <p>{`Dates Unavailable: ${data.availability.blackoutDates.length ? data.availability.blackoutDates : 'No blackout dates scheduled'}`}</p>
+                        <h2>Upcoming Project:</h2>
+                        <section className={`${BUILDER}project-container`}>
+                            <p>{`Start Date: ${data.availability.upcomingProjects.startDate}`}</p>
+                            <p>Project: <a target="blank" href={data.availability.upcomingProjects.project === "No scheduled project" ? "#" : `${data.availability.upcomingProjects.project}`}>{`${data.availability.upcomingProjects.project}`}</a></p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Builder;
