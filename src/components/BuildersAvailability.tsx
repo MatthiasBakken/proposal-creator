@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Builders from './Builders';
-import MenuButton from "./MenuButton";
 
 import './builders-availability.css';
 import { IBuilderData } from '../dummy-data/builders-data';
@@ -16,7 +15,6 @@ const BuildersAvailability: React.FC<IProps> = ( props ) => {
 
     return (
         <div className="builders-availability-container">
-            <MenuButton />
             <Builders data={data} />
         </div>
     )
