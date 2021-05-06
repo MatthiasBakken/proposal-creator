@@ -7,8 +7,8 @@ Hi my name is Matthias Bakken (SleepyViking).
 Things I've done (that aren't in private repos):
 
 - [GitHub](https://github.com/MatthiasBakken)
-- [LinkedIn](https://www.linkedin.com/in/MatthiasBakken/)
-- [Rick&Morty](csb-6d95q.netlify.app)
+- [LinkedIn](https://www.linkedin.com/in/Matthias-Bakken/)
+- [Rick&Morty](https://rickandmorty-crappyfanpage.netlify.app/)
 
 ## Description
 
