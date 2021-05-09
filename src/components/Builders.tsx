@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Fullstack from './Fullstack';
 import Frontend from './Frontend';
 import Backend from './Backend';
 import { IBuilderData } from '../dummy-data/builders-data';
+
 
 interface IProps {
     data: IBuilderData[];
@@ -14,6 +16,7 @@ const Builders: React.FC<IProps> = (props) => {
 
     return (
         <div className="builders-container">
+            <Fullstack data={data} />
             <Frontend data={data} />
             <Backend data={data} />
         </div>

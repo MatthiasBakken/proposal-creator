@@ -15,7 +15,7 @@ const Frontend: React.FC<IProps> = ( props ) => {
         <div className="frontend-container">
             {
                 data.map( builder => {
-                    if ( builder.designation.toLowerCase() === 'frontend' || builder.designation.toLowerCase() === 'fullstack' ) {
+                    if ( builder.designation.toLowerCase() === 'frontend') {
                         return (
                             <Builder data={builder} key={builder.id} />
                         );

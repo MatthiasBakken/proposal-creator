@@ -7,15 +7,15 @@ interface IProps {
     data: IBuilderData[];
 }
 
-const Backend: React.FC<IProps> = ( props ) => {
+const Fullstack: React.FC<IProps> = ( props ) => {
 
     const { data } = props;
 
     return (
-        <div className="backend-container">
+        <div className="fullstack-container">
             {
                 data.map( builder => {
-                    if ( builder.designation.toLowerCase() === 'backend') {
+                    if ( builder.designation.toLowerCase() === 'fullstack' ) {
                         return (
                             <Builder data={builder} key={builder.id} />
                         );
@@ -27,4 +27,4 @@ const Backend: React.FC<IProps> = ( props ) => {
     );
 };
 
-export default Backend;
+export default Fullstack;

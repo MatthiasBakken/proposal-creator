@@ -13,14 +13,20 @@ const Builder: React.FC<IProps> = (props) => {
 
     const { data } = props;
 
+    const onClickHandler = (event: React.MouseEvent<HTMLElement> ) => {
+        event.stopPropagation()
+        event.preventDefault()
+        document.querySelector(`#a${data.id}`)!.classList.toggle( "builder__focused" );
+    };
+
     return (
         <div className={`${BUILDER}main`}>
-            <div className={`${BUILDER}container`}>
+            <div className={`${BUILDER}container`} onClick={(event) => onClickHandler(event)}>
                 <div className={`${BUILDER}header`}>
                     <h1 className={`${BUILDER}name`}>{`${data.firstName} ${data.lastName}`}</h1>
                     <p className={`${BUILDER}designation`}>{`Designation: ${data.designation}`}</p>
                 </div>
-                <div className={`${BUILDER}details`}>
+                <div id={`a${data.id}`} className={`${BUILDER}details`}>
                     <div className={`${BUILDER}skills-container`}>
                         <h2 className={`${BUILDER}skill-tag`}>Skills: </h2>
                         <div className={`${BUILDER}skills`}>

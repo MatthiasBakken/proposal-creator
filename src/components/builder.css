@@ -50,7 +50,7 @@
 	-moz-transition: max-height 0.8s;
 	transition: max-height 0.8s;
 }
-.builder__container:hover .builder__details {
+.builder__container .builder__focused {
 	max-height: 300px;
 	overflow: scroll;
 }
