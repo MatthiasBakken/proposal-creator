@@ -8,7 +8,7 @@ const Menu: React.FC<{}> = () => {
 
   return (
       <div className="menu-container">
-        <div className="header"></div>
+        <div className="header1"></div>
         <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
         <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
           <div className="spinner diagonal part-1"></div>

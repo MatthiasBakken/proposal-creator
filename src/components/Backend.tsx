@@ -17,7 +17,7 @@ const Backend: React.FC<IProps> = ( props ) => {
                 data.map( builder => {
                     if ( builder.designation.toLowerCase() === 'backend') {
                         return (
-                            <Builder data={builder} key={builder.id} />
+                            <Builder data={builder} key={builder.id}/>
                         );
                     }
                     return;

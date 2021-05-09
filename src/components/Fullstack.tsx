@@ -4,12 +4,12 @@ import Builder from './Builder';
 import { IBuilderData } from '../dummy-data/builders-data';
 
 interface IProps {
-    data: IBuilderData[];
+  data: IBuilderData[];
 }
 
 const Fullstack: React.FC<IProps> = ( props ) => {
 
-    const { data } = props;
+  const { data } = props;
 
     return (
         <div className="fullstack-container">
@@ -17,7 +17,7 @@ const Fullstack: React.FC<IProps> = ( props ) => {
                 data.map( builder => {
                     if ( builder.designation.toLowerCase() === 'fullstack' ) {
                         return (
-                            <Builder data={builder} key={builder.id} />
+                            <Builder data={builder} key={builder.id}/>
                         );
                     }
                     return;
