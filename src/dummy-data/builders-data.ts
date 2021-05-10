@@ -33,7 +33,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Les',
     lastName: 'Stuart',
     designation: 'Frontend',
-    email: 'builder@email.com',
+    email: 'builder1@email.com',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -60,7 +60,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Natalie',
     lastName: 'Portman',
     designation: 'Frontend',
-    email: 'builder@email.com',
+    email: 'builder2@email.com',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -91,7 +91,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'James',
     lastName: 'Judge',
     designation: 'Frontend',
-    email: 'builder@email.com',
+    email: 'builder3@email.com',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -122,7 +122,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Jacob',
     lastName: 'Langham',
     designation: 'Frontend',
-    email: 'builder@email.com',
+    email: 'builder4@email.com',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -154,7 +154,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Diep',
     lastName: 'Truong',
     designation: 'Backend',
-    email: 'builder@email.com',
+    email: 'builder5@email.com',
     skills: [
       'JavaScript',
       'HTML5',
@@ -190,7 +190,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Elizabeth',
     lastName: 'Uselton',
     designation: 'Backend',
-    email: 'builder@email.com',
+    email: 'builder6@email.com',
     skills: [
       'Python',
       'Ruby on Rails',
@@ -216,7 +216,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Peter',
     lastName: 'Gray',
     designation: 'Backend',
-    email: 'builder@email.com',
+    email: 'builder7@email.com',
     skills: [
       'JavaScript',
       'React',
@@ -246,7 +246,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Samuel',
     lastName: 'M',
     designation: 'Fullstack',
-    email: 'builder@email.com',
+    email: 'builder8@email.com',
     skills: [
       'JavaScript',
       'Python',

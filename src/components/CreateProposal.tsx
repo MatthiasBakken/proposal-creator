@@ -90,6 +90,7 @@ const CreateProposal: React.FC<IProps> = ( props ) => {
               {errors.other && touched.other ? (
                 <div className="error-div">{errors.other}</div>
               ) : null}
+              <label>Builders: </label>
               <MatchFilter builders={data} skillsRequired={options}/>
               <span className={`${CREATE}button-container`}>
                 <button className="signup_button" type="submit" disabled={!( dirty && isValid )} >Send Proposal</button>
