@@ -35,9 +35,10 @@ With this project I want to create something that can easily be turned into a fu
 
 This project is close to a functional app and won't require too much more on the frontend. There will need to be a minor refactor and then depending on the type of MVP we want to start with, this is a decent codebase to build off of. Here is a list of items needing to be completed and some optional features:
 
-- There is some odd functionality when clicking the boxes in the Add Builder section of create proposal.
-- I need to write tests to get coverage in current codebase, but was worried we would want to change more than I realize so I didn't bother with end-to-end as of yet.
-- Add a Builder portal in Settings that allows users to update their availability, skills, contact info and more.
+- There is some odd functionality when clicking the boxes in the Add Builder section of create proposal
+- I didn't add the Other Skills into the search function. This is a couple minute fix and won't cause any problems
+- I need to write tests to get coverage in current codebase, but was worried we would want to change more than I realize so I didn't bother with end-to-end as of yet
+- Add a Builder portal in Settings that allows users to update their availability, skills, contact info and more
 - Create APIs for necessary data flow
 - Create slashpage for Login/Signup
 - Allow communication in-app
