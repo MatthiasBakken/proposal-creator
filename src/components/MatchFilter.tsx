@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Field } from 'formik';
 
 import { IBuilderData } from '../dummy-data/builders-data';
 
@@ -29,19 +30,6 @@ const MatchFilter: React.FC<IProps> = ( props ) => {
     } ).reverse();
     setBuilderArr( tempArr );
   }, [ props ] )
-  
-  const addBuilderHandler = ( email: string ): void => {
-    if ( builderEmailArr.includes( email.toLocaleLowerCase() ) ) {
-      let tempArr = [ ...builderEmailArr ];
-      tempArr.splice( tempArr.indexOf( email ), 1 );
-      setBuilderEmailArr( tempArr );
-      console.log( builderEmailArr );
-    } else {
-      let tempArr = [ ...builderEmailArr ];
-      setBuilderEmailArr( [ ...tempArr, email ] );
-      console.log( builderEmailArr );
-    };
-  };
 
   return (
     <div className={`${MATCH}container`}>
@@ -50,21 +38,24 @@ const MatchFilter: React.FC<IProps> = ( props ) => {
         builderArr.map( builder => {
           return (
             <div key={builder.id} className={`${MATCH}builder`}>
-              <h1 className={`${MATCH}builder-name`}>{`${builder.firstName} ${builder.lastName}`}</h1>
-              <p className={`${MATCH}builder-availability`}>{`Available: ${builder.availability.currentlyAvail}`}</p>
-              <p className={`${MATCH}builder-availability`}>{`Available On: ${builder.availability.availableOn}`}</p>
-              <div className={`${MATCH}builder-skills`}>
-                {
-                  builder.skills.map( skill => {
-                    return (
-                      <p key={`${skill}${Math.floor(Math.random() * 1000) + 1}`} className={`${MATCH}skill`}>{`${skill}`}</p>
-                    )
-                  })
-                }
-              </div>
-              <span className={`${MATCH}button-container`}>
-                <button className={`${MATCH}button`} onClick={() => addBuilderHandler(builder.email)}>Add</button>
-              </span>
+              <label className={`${MATCH}builder-label`}>
+                <span className={`${MATCH}checkbox`}>
+                  <Field type="checkbox" name="builders" value={`${builder.email}`} />
+                </span>
+                <h1 className={`${MATCH}builder-name`}>{`Name: ${builder.firstName} ${builder.lastName}`}</h1>
+                <p className={`${MATCH}builder-availability`}>{`Available: ${builder.availability.currentlyAvail}`}</p>
+                <p className={`${MATCH}builder-availability`}>{`Available On: ${builder.availability.availableOn}`}</p>
+                <label>Skills: </label>
+                <div className={`${MATCH}builder-skills`}>
+                  {
+                    builder.skills.map( skill => {
+                      return (
+                        <p key={`${skill}${Math.floor(Math.random() * 1000) + 1}`} className={`${MATCH}skill`}>{`${skill}`}</p>
+                      )
+                    })
+                  }
+                </div>
+              </label>
             </div>
           )
         } ) :

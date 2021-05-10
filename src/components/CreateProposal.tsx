@@ -24,7 +24,10 @@ const SignupSchema = Yup.object().shape( {
   skills: Yup.array()
     .min( 1, 'Must select at least one' )
     .required('Required'),
-  other: Yup.string()
+  other: Yup.string(),
+  builders: Yup.array()
+    .min( 2, 'Must select at least 2 builders' )
+    .required( 'Required' )
 } );
 
 const CreateProposal: React.FC<IProps> = ( props ) => {
@@ -55,7 +58,8 @@ const CreateProposal: React.FC<IProps> = ( props ) => {
           initialValues={{
             description: '',
             skills: [],
-            other: ''
+            other: '',
+            builders: []
           }}
           validationSchema={SignupSchema}
           onSubmit={( values ) => {
@@ -90,8 +94,11 @@ const CreateProposal: React.FC<IProps> = ( props ) => {
               {errors.other && touched.other ? (
                 <div className="error-div">{errors.other}</div>
               ) : null}
-              <label>Builders: </label>
-              <MatchFilter builders={data} skillsRequired={options}/>
+              <label>Select Builders: </label>
+              <MatchFilter builders={data} skillsRequired={options} />
+              {errors.builders && touched.builders ? (
+                <div className="error-div">{errors.builders}</div>
+              ) : null}
               <span className={`${CREATE}button-container`}>
                 <button className="signup_button" type="submit" disabled={!( dirty && isValid )} >Send Proposal</button>
               </span>
