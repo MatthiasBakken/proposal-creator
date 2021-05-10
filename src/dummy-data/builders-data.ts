@@ -1,4 +1,5 @@
 import { v4 as uuid } from 'uuid'
+import { string } from "yup/lib/locale";
 
 const newDate = new Date();
 const date = newDate.getDate();
@@ -12,6 +13,7 @@ export interface IBuilderData {
   firstName: string;
   lastName: string;
   designation: string;
+  email: string;
   skills: string[];
   availability: {
     currentlyAvail: boolean;
@@ -21,7 +23,8 @@ export interface IBuilderData {
       startDate: string;
       project: string;
     }
-  }
+  },
+  match: number;
 }
 
 export const buildersData: IBuilderData[] = [
@@ -30,6 +33,7 @@ export const buildersData: IBuilderData[] = [
     firstName: 'Les',
     lastName: 'Stuart',
     designation: 'Frontend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
       'TypeScript',
@@ -48,15 +52,18 @@ export const buildersData: IBuilderData[] = [
             startDate: '08/14/2021',
             project: 'https://linktoproject.com',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Natalie',
     lastName: 'Portman',
     designation: 'Frontend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
+      'TypeScript',
       'HTML5',
       'CSS3',
       'React',
@@ -76,15 +83,18 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'James',
     lastName: 'Judge',
     designation: 'Frontend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
+      'TypeScript',
       'jQuery',
       'PHP',
       'HTML5',
@@ -104,15 +114,18 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Jacob',
     lastName: 'Langham',
     designation: 'Frontend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
+      'TypeScript',
       'HTML5',
       'CSS3',
       'React',
@@ -133,13 +146,15 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Diep',
     lastName: 'Truong',
     designation: 'Backend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
       'HTML5',
@@ -167,13 +182,15 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Elizabeth',
     lastName: 'Uselton',
     designation: 'Backend',
+    email: 'builder@email.com',
     skills: [
       'Python',
       'Ruby on Rails',
@@ -191,13 +208,15 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Peter',
     lastName: 'Gray',
     designation: 'Backend',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
       'React',
@@ -219,13 +238,15 @@ export const buildersData: IBuilderData[] = [
             startDate: '',
             project: 'No scheduled project',
         },
-    }
+    },
+    match: 0,
   },
   {
     id: uuid(),
     firstName: 'Samuel',
     lastName: 'M',
     designation: 'Fullstack',
+    email: 'builder@email.com',
     skills: [
       'JavaScript',
       'Python',
@@ -258,6 +279,7 @@ export const buildersData: IBuilderData[] = [
             startDate: '02/01/2022',
             project: 'https://linktoproject.com',
         },
-    }
+    },
+    match: 0,
   },
 ]

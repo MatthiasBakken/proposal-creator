@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 /* create-proposal__ */
+.create-proposal__container {
+	font-family: "Varela Round", sans-serif;
+}
+.create-proposal__container .error-div {
+	color: red;
+	margin: 5px 0 0 0;
+}
 .create-proposal__form-container {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 	align-items: center;
 }
@@ -16,9 +24,13 @@
 	margin: 20px 0 5px 0;
 	font-size: 20px;
 }
+.create-proposal__form .create-proposal__description {
+	font-size: 16px;
+	font-family: "Varela Round", sans-serif;
+}
 .create-proposal__checkbox {
 	width: 100%;
-	height: 40%;
+	height: 200px;
 	overflow: scroll;
 	display: flex;
 	flex-wrap: wrap;
@@ -44,7 +56,20 @@
 .create-proposal__skill-option input {
 	display: initial !important;
 }
+.create-proposal__other-skill {
+	font-size: 16px;
+	width: 100%;
+}
 textarea {
 	height: 200px;
 	width: 100%;
+}
+.create-proposal__button-container {
+	margin: 20px 0 0 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.create-proposal__button-container button {
+	font-size: 20px;
 }

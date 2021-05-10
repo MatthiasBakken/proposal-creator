@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './builder.css';
 import { IBuilderData } from '../dummy-data/builders-data';
