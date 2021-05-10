@@ -4,18 +4,18 @@ import Builder from './Builder';
 import { IBuilderData } from '../dummy-data/builders-data';
 
 interface IProps {
-    data: IBuilderData[];
+  data: IBuilderData[];
 }
 
-const Frontend: React.FC<IProps> = ( props ) => {
+const Fullstack: React.FC<IProps> = ( props ) => {
 
-    const { data } = props;
+  const { data } = props;
 
     return (
-        <div className="frontend-container">
+        <div className="fullstack-container">
             {
                 data.map( builder => {
-                    if ( builder.designation.toLowerCase() === 'frontend') {
+                    if ( builder.designation.toLowerCase() === 'fullstack' ) {
                         return (
                             <Builder data={builder} key={builder.id}/>
                         );
@@ -27,4 +27,4 @@ const Frontend: React.FC<IProps> = ( props ) => {
     );
 };
 
-export default Frontend;
+export default Fullstack;

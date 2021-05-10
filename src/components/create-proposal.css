@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+/* create-proposal__ */
+.create-proposal__container {
+	font-family: "Varela Round", sans-serif;
+}
+.create-proposal__container .error-div {
+	color: red;
+	margin: 5px 0 0 0;
+}
+.create-proposal__form-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100vw;
+	align-items: center;
+}
+.create-proposal__form {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	height: 100%;
+}
+.create-proposal__form label {
+	margin: 20px 0 5px 0;
+	font-size: 20px;
+}
+.create-proposal__form .create-proposal__description {
+	font-size: 16px;
+	font-family: "Varela Round", sans-serif;
+}
+.create-proposal__checkbox {
+	width: 100%;
+	height: 200px;
+	overflow: scroll;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: 1px solid rgb(100, 100, 100);
+}
+.create-proposal__skill-option {
+	margin: 20px 10px 0 0 !important;
+	width: 30% !important;
+	height: 30px;
+}
+@media screen and (max-width: 600px) {
+	.create-proposal__checkbox {
+		justify-content: space-evenly;
+	}
+	.create-proposal__skill-option {
+		width: 40% !important;
+		height: 40px;
+		margin: 10px !important;
+		line-height: 20px;
+	}
+}
+.create-proposal__skill-option input {
+	display: initial !important;
+}
+.create-proposal__other-skill {
+	font-size: 16px;
+	width: 100%;
+}
+textarea {
+	height: 200px;
+	width: 100%;
+}
+.create-proposal__button-container {
+	margin: 20px 0 20px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.create-proposal__button-container button {
+	font-size: 20px;
+}
+.match__container {
+	width: 100%;
+	height: 200px;
+	overflow: scroll;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: 1px solid rgb(100, 100, 100);
+}
+.match__builder {
+	padding: 10px;
+	border-bottom: 1px solid gray;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.match__checkbox {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.match__builder-label input {
+	display: initial !important;
+	height: 20px;
+	width: 20px;
+}
+.match__builder-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.match__skill {
+	margin: 10px;
+}

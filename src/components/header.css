@@ -1,0 +1,30 @@
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: linear-gradient(90deg, #2ec4b6 0%, #e18ad4 100%);
+	position: -webkit-sticky;
+	position: sticky;
+	height: 60px !important;
+	top: 0px;
+	z-index: 10;
+}
+
+.header .headerLogo {
+	font-family: "Varela Round", sans-serif;
+	font-size: 1.1rem;
+	color: white;
+	margin-top: 40px;
+	height: 60px;
+}

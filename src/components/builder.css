@@ -13,6 +13,7 @@
 	flex-direction: column;
 	align-items: center;
 	border-bottom: 1px solid #2ec4b6;
+	cursor: pointer;
 }
 .builder__container {
 	width: 100%;
@@ -50,7 +51,7 @@
 	-moz-transition: max-height 0.8s;
 	transition: max-height 0.8s;
 }
-.builder__container:hover .builder__details {
+.builder__container .builder__focused {
 	max-height: 300px;
 	overflow: scroll;
 }

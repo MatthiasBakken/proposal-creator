@@ -15,9 +15,9 @@ const Backend: React.FC<IProps> = ( props ) => {
         <div className="backend-container">
             {
                 data.map( builder => {
-                    if ( builder.designation.toLowerCase() === 'backend' || builder.designation.toLowerCase() === 'fullstack' ) {
+                    if ( builder.designation.toLowerCase() === 'backend') {
                         return (
-                            <Builder data={builder} key={builder.id} />
+                            <Builder data={builder} key={builder.id}/>
                         );
                     }
                     return;
