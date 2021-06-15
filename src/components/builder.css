@@ -52,19 +52,29 @@
 	transition: max-height 0.8s;
 }
 .builder__container .builder__focused {
-	max-height: 300px;
+	max-height: 100vh;
 	overflow: scroll;
 }
+.builder__skills-container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
 .builder__skills {
+	width: 75%;
 	background-color: white;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+	align-self: center;
 }
 .builder__skill-tag {
-	width: 100%;
+	width: 75%;
 	text-align: center;
 	margin: 5px;
+	align-self: center;
 }
 .builder__skill {
 	color: white;
